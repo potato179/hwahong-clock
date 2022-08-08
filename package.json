@@ -1,0 +1,19 @@
+{
+  "name": "gumho-clock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potato179/gumho-clock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potato179/gumho-clock/issues"
+  },
+  "homepage": "https://github.com/potato179/gumho-clock#readme"
+}
