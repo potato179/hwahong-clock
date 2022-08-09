@@ -29,13 +29,13 @@ CREATE TABLE calander (
     events longtext NOT NULL
 );
 
-INSERT INTO calander (day, broadcast, events) values("월", "", "");
-INSERT INTO calander (day, broadcast, events) values("화", "", "");
-INSERT INTO calander (day, broadcast, events) values("수", "", "");
-INSERT INTO calander (day, broadcast, events) values("목", "", "");
-INSERT INTO calander (day, broadcast, events) values("금", "", "");
-INSERT INTO calander (day, broadcast, events) values("토", "", "");
-INSERT INTO calander (day, broadcast, events) values("일", "", "");
+INSERT INTO calander (day, broadcast, events) values("0", "", "");
+INSERT INTO calander (day, broadcast, events) values("1", "", "");
+INSERT INTO calander (day, broadcast, events) values("2", "", "");
+INSERT INTO calander (day, broadcast, events) values("3", "", "");
+INSERT INTO calander (day, broadcast, events) values("4", "", "");
+INSERT INTO calander (day, broadcast, events) values("5", "", "");
+INSERT INTO calander (day, broadcast, events) values("6", "", "");
 ```
 ### 참고사항
 테이블 열 개수는 고정됩니다.
