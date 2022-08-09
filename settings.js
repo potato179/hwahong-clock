@@ -37,7 +37,7 @@ function updateCalander(){
         data: sendData, 
         dataType: "json", 
         success: alert("저장되었습니다."),
-        error: console.log(jqXHR.responseText)
+        error: console.log("오류가 발생했습니다!")
     };
     $.ajax(ajaxData);
 }
