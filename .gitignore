@@ -71,3 +71,5 @@ dist
 .tern-port
 
 test.html
+
+/public/js/mysql_con.js
