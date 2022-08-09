@@ -8,8 +8,8 @@ function onload(){
         dataType: "json",
         success: function(data, status, xhr){
             for(var i = 0; i < 7; i++){
-                $(`#${i}_events`).val() = data[i].events;
-                $(`#${i}_broadcast`).val() = data[i].broadcast;
+                $(`#${i}_events`).val(data[i].events);
+                $(`#${i}_broadcast`).val(data[i].broadcast);
 
                 console.log($(`#${i}_events`).val(), $(`#${i}_broadcast`).val())
             }
