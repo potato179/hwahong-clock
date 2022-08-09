@@ -5,6 +5,10 @@ function settings_html(req, res, next){
     res.sendFile('./settings.html', {root: __dirname});
 }
 
+function settings_js(req, res, next){
+    res.sendFile('./settings.js', {root: __dirname});
+}
+
 function get_calander(req, res, next){
     var s = `select * from calander;`;
     con.query(s, function(err, result){
@@ -28,5 +32,6 @@ function write_calander(req, res, next){
 }
 
 exports.settings_html = settings_html;
+exports.settings_js = settings_js;
 exports.get_calander = get_calander;
 exports.write_calander = write_calander;
