@@ -9,6 +9,8 @@ function onload(){
         success: function(data, status, xhr){
             for(var i = 0; i < 7; i++){
                 console.log($(`#${i}_events`).val(), data[i]);
+                $(`#${i}_events`).val() = data[i].events;
+                $(`#${i}_broadcast`).val() = data[i].broadcast;
             }
         }, 
         error: function(q, w, e){}
