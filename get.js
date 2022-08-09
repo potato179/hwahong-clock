@@ -20,14 +20,16 @@ function get_calander(req, res, next){
 function write_calander(req, res, next){
     var events_arr = req.query.events;
     var broadcast_arr = req.query.broadcast;
-    con.query(`update calander set broadcast = "${broadcast}", events = "${events}"; where day = "${day}"`, function(err, result){
-        if(err) throw err;
-        console.log(result);
-        res.send({
-            condition: "등록됨",
-            message: "등록을 완료하였습니다."
+    for(var i = 0; i < 7; i++){
+        con.query(`update calander set broadcast = "${broadcast_arr[i]}", events = "${events_arr[i]}"; where day = "${i}"`, function(err, result){
+            if(err) throw err;
+            console.log(result);
+            res.send({
+                condition: "등록됨",
+                message: "등록을 완료하였습니다."
+            });
         });
-    });
+    }
 }
 
 exports.settings_html = settings_html;
