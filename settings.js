@@ -33,7 +33,7 @@ function updateCalander(){
 
     var ajaxData = { 
         type: "GET", 
-        url : "login",
+        url : "write_calander",
         data: sendData, 
         dataType: "json", 
         success: alert("저장되었습니다."),
