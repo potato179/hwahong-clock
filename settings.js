@@ -9,15 +9,6 @@ function onload(){
         success: function(data, status, xhr){
             console.log(data);
             var str = "";
-            data.forEach(function(item, index){
-                str += `<tr>`;
-                str += `<th scope = "row">${item.id}</th>`;
-                str += `<td>${item.name}</td>`;
-                str += `<td><a href = "ViewQuestion(${item.id})">${item.title}<a></td>`;
-                str += `<td>${item.category}</td>`;
-                str += `</tr>`;
-            });
-            $("#q_list").html(str);
         }, error: function(q, w, e){}
     };
     $.ajax(ajaxdata);
@@ -37,8 +28,8 @@ function ViewQuestion(id){
 
             var question_info = "";
             question_info += `<button onclick = "window.location.hef = 'community.html'"><i class = "fas fa-arrow-left box-white" style = "font-size: 250%"></i></button>`;
-            question_info += `<button class = 'edit' onclick = edit(${data.id})><i class="fas fa-edit" style = 'font-size: 250%; background: rgba(0, 0, 0, 0); float: right;'></i></button>`;
-            question_info += `<button class = 'delete' onclick = delete_question(${data.id})><i class="far fa-trash-alt" style = 'font-size: 250%; background: rgba(0, 0, 0, 0); float: right'></i></button>`;
+            question_info += `<button class = 'edit' onclick = edit(${data.id})><i class = "fas fa-edit" style = 'font-size: 250%; background: rgba(0, 0, 0, 0); float: right;'></i></button>`;
+            question_info += `<button class = 'delete' onclick = delete_question(${data.id})><i class = "far fa-trash-alt" style = 'font-size: 250%; background: rgba(0, 0, 0, 0); float: right'></i></button>`;
             question_info += "<br><br><hr><br><br>";
             question_info += `<br><div class = "title">${data.title}</div><br><hr><br>`;
             question_info += `내용: <textarea id='content' rows=4 cols=100>${data.content}</textarea><br><br><br><br><br>`;
