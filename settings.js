@@ -9,7 +9,8 @@ function onload(){
         success: function(data, status, xhr){
             console.log(data);
             var str = "";
-        }, error: function(q, w, e){}
+        }, 
+        error: function(q, w, e){}
     };
     $.ajax(ajaxdata);
 }
