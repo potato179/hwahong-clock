@@ -10,6 +10,8 @@ function onload(){
             for(var i = 0; i < 7; i++){
                 $(`#${i}_events`).val() = data[i].events;
                 $(`#${i}_broadcast`).val() = data[i].broadcast;
+
+                console.log($(`#${i}_events`).val(), $(`#${i}_broadcast`).val())
             }
         }, 
         error: console.log("오류가 발생했습니다!")
