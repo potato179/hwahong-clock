@@ -7,8 +7,7 @@ function onload(){
         data: {},
         dataType: "json",
         success: function(data, status, xhr){
-            console.log(data);
-            var str = "";
+            console.log("ㅁㄴㅇㄹ", data);
         }, 
         error: function(q, w, e){}
     };

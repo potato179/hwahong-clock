@@ -6,7 +6,7 @@ const app = express();
 const mysqlconfig = require("./public/js/mysql_con.js");
 const con = mysqlconfig.con;
 
-const ps_getdb = require("./ps_getdb.js");
+const ps_getdb = require("./getdb.js");
 
 const hostname = "127.0.0.1";
 const port = "3000";
