@@ -27,7 +27,7 @@ app.get("/", function(req, res, next){
 });
 
 var urls = [
-    {url: "/settings_html", ps: ps_get.settings_html},
+    {url: "/settings", ps: ps_get.settings_html},
     {url: "/get_calander", ps: ps_get.get_calander},
     {url: "/write_calander", ps: ps_get.write_calander}
 ];
