@@ -7,7 +7,9 @@ function onload(){
         data: {},
         dataType: "json",
         success: function(data, status, xhr){
-            console.log("ㅁㄴㅇㄹ", data);
+            for(var i = 0; i < 7; i++){
+                console.log($(`#${i}_events`).val(), data[i]);
+            }
         }, 
         error: function(q, w, e){}
     };
