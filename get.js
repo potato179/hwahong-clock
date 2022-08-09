@@ -2,7 +2,7 @@ const mysqlconfig = require('./public/js/mysql_con.js');
 var con = mysqlconfig.con;
 
 function settings_html(req, res, next){
-    res.sendFile('settings.html', {root: __dirname});
+    res.sendFile('./settings.html', {root: __dirname});
 }
 
 function get_calander(req, res, next){

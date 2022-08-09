@@ -6,7 +6,7 @@ const app = express();
 const mysqlconfig = require("./public/js/mysql_con.js");
 const con = mysqlconfig.con;
 
-const ps_getdb = require("./getdb.js");
+const ps_get = require("./get.js");
 
 const hostname = "127.0.0.1";
 const port = "3000";
@@ -27,9 +27,9 @@ app.get("/", function(req, res, next){
 });
 
 var urls = [
-    {url: "/settings_html", ps: ps_getdb.settings_html},
-    {url: "/get_calander", ps: ps_getdb.get_calander},
-    {url: "/write_calander", ps: ps_getdb.write_calander}
+    {url: "/settings_html", ps: ps_get.settings_html},
+    {url: "/get_calander", ps: ps_get.get_calander},
+    {url: "/write_calander", ps: ps_get.write_calander}
 ];
 
 urls.forEach(function(element, index){
