@@ -12,7 +12,7 @@ function onload(){
                 $(`#${i}_broadcast`).val() = data[i].broadcast;
             }
         }, 
-        error: function(q, w, e){}
+        error: console.log("오류가 발생했습니다!")
     };
     $.ajax(ajaxdata);
 }
