@@ -14,7 +14,9 @@ function onload(){
                 console.log($(`#${i}_events`).val(), $(`#${i}_broadcast`).val())
             }
         }, 
-        error: console.log("오류가 발생했습니다!")
+        error: function (jqXHR, textStatus, errorThrown){ 
+            console.log(`오류가 발생했습니다! ${jqXHR.responseText}`); 
+        }
     };
     $.ajax(ajaxdata);
 }
@@ -39,7 +41,9 @@ function updateCalander(){
         data: sendData, 
         dataType: "json", 
         success: alert("저장되었습니다."),
-        error: console.log("오류가 발생했습니다!")
+        error: function (jqXHR, textStatus, errorThrown){ 
+            console.log(`오류가 발생했습니다! ${jqXHR.responseText}`); 
+        }
     };
     $.ajax(ajaxData);
 }
