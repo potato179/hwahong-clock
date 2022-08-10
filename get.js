@@ -21,6 +21,7 @@ function write_calander(req, res, next){
     var events_arr = req.query.events;
     var broadcast_arr = req.query.broadcast;
     for(var i = 0; i < 7; i++){
+        console.log(`ok in ${i}`);
         con.query(`update calander set broadcast = "${broadcast_arr[i]}", events = "${events_arr[i]}" where day = "${i}";`, function(err, result){
             if(err) throw err;
             console.log(result);
