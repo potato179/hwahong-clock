@@ -30,8 +30,8 @@ function setClock(){
     var min = modifyNumber(dateInfo.getMinutes());
     var sec = modifyNumber(dateInfo.getSeconds());
     var year = dateInfo.getFullYear();
-    var month = dateInfo.getMonth() + 1;
-    var date = dateInfo.getDate();
+    var month = modifyNumber(dateInfo.getMonth()+1);
+    var date = modifyNumber(dateInfo.getDate());
 
     var dateDisplay = `${year}년 ${month}월 ${date}일`;
     var timeDisplay = `${hour}:${min}:${sec}`;
@@ -41,7 +41,30 @@ function setClock(){
 }
 
 function setMeal(){
-    
+    var dateInfo = new Date(); 
+    var year = dateInfo.getFullYear();
+    var month = modifyNumber(dateInfo.getMonth()+1);
+    var date = modifyNumber(dateInfo.getDate());
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var xmlDoc = this.responseXML;
+            var x = xmlDoc.getElementsByTagName("row");
+            console.log(x)
+            for(var i = 0; i < x.length; i++){
+                console.log(i, x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue)
+                if(x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue == "중식"){
+                    $("#lunch").html(`중식: [${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}] ${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
+                }
+                if(x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue == "석식"){
+                    $("#dinner").html(`중식: [${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}] ${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
+                }
+            }
+        }
+    };
+    xhttp.open("GET", `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=70460bde9e304a95831a20bef79102bc&ATPT_OFCDC_SC_CODE=F10&SD_SCHUL_CODE=7380061&MLSV_YMD=${year}${month}${date}`, true);
+    xhttp.send();
 }
 
 function modifyNumber(time){
