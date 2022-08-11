@@ -13,6 +13,8 @@ window.onload = function(){
             for(var i = 0; i < 7; i++){
                 $(`#${i}_events`).val(data[i].events);
                 $(`#${i}_broadcast`).val(data[i].broadcast);
+                $(`#${i}_events`).html(data[i].events);
+                $(`#${i}_broadcast`).html(data[i].broadcast);
 
                 console.log($(`#${i}_events`).val(), $(`#${i}_broadcast`).val())
             }
