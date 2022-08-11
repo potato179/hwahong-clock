@@ -24,12 +24,12 @@ function write_calander(req, res, next){
         con.query(`update calander set broadcast = "${broadcast_arr[i]}", events = "${events_arr[i]}" where day = "${i}";`, function(err, result){
             if(err) throw err;
             console.log(result);
-            res.send({
-                condition: "등록됨",
-                message: "등록을 완료하였습니다."
-            });
         });
     }
+    res.send({
+        condition: "등록됨",
+        message: "등록을 완료하였습니다."
+    });
 }
 
 exports.settings_html = settings_html;
