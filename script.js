@@ -2,6 +2,7 @@ console.log("script 로딩 완료");
 
 window.onload = function(){
     setInterval(setClock, 1000);
+    setInterval(setMeal, 1000);
 
     var ajaxdata = {
         type: "GET",
@@ -31,12 +32,16 @@ function setClock(){
     var year = dateInfo.getFullYear();
     var month = dateInfo.getMonth() + 1;
     var date = dateInfo.getDate();
-    
+
     var dateDisplay = `${year}년 ${month}월 ${date}일`;
     var timeDisplay = `${hour}:${min}:${sec}`;
     $("#date").html(dateDisplay);
     $("#time").html(timeDisplay);
     dateInfo.getHours();
+}
+
+function setMeal(){
+    
 }
 
 function modifyNumber(time){
