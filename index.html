@@ -34,7 +34,7 @@
         }
     </style>
 </head>
-<body>
+<body onload = "onload();">
     <div style = "height: 1.75rem; background-color: #3d8890;"></div>
     <div style = "margin: 25px;">
         <div class = "d-flex align-items-center text-decoration-none" style = "float: left;">
@@ -43,237 +43,76 @@
         </div>
         <div style = "display: flex;">
             <table>
-                <tbody>
-                    <tr>
-                        <td style="width:10%; text-align: center;" >
-                            <div>요일</div>
-                        </td>
-                        <td style="width:20%; text-align: center;" >
-                            <div>일정</div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>화</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>수</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>목</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>금</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>토</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>일</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <tr>
+                    <td class = "bold">요일</td>
+                    <td class = "bold">학사 일정</td>
+                </tr>
+                <tr>
+                    <td class = "bold">월</td>
+                    <td><input id = "0_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">화</td>
+                    <td><input id = "1_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">수</td>
+                    <td><input id = "2_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">목</td>
+                    <td><input id = "3_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">금</td>
+                    <td><input id = "4_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">토</td>
+                    <td><input id = "5_events" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">일</td>
+                    <td><input id = "6_events" type = "text"></td>
+                </tr>
+            </table><br>
+            
             <table>
-                <tbody>
-                    <tr>
-                        <td style="width:10%; text-align: center;" >
-                            <div>요일</div>
-                        </td>
-                        <td style="width:20%; text-align: center;" >
-                            <div>일정</div>
-                        </td>
+                <tr>
+                    <td class = "bold">요일</td>
+                    <td class = "bold">방송 일정</td>
+                </tr>
+                <tr>
+                    <td class = "bold">월</td>
+                    <td><input id = "0_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">화</td>
+                    <td><input id = "1_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">수</td>
+                    <td><input id = "2_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">목</td>
+                    <td><input id = "3_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">금</td>
+                    <td><input id = "4_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">토</td>
+                    <td><input id = "5_broadcast" type = "text"></td>
+                </tr>
+                <tr>
+                    <td class = "bold">일</td>
+                    <td><input id = "6_broadcast" type = "text"></td>
+                </tr>
+            </table><br>
 
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>화</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>수</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>목</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>금</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>토</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>일</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width:10%; text-align: center;" >
-                            <div>요일</div>
-                        </td>
-                        <td style="width:20%; text-align: center;" >
-                            <div>일정</div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>월</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>화</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>수</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>목</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>금</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>토</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">
-                            <div>일</div>
-                        </td>
-                        <td style="text-align: center;">
-                            <div>ㅇㅇ</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+            <script type="text/javascript" src = "./script.js"></script>
         </div>
     </div>
 </body>
