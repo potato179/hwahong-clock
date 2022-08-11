@@ -37,7 +37,7 @@ function setClock(){
     var day_ = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
     var day = day_[dateInfo.getDay()];
     
-    var dateDisplay = `${year}년 ${month}월 ${date}일`;
+    var dateDisplay = `${year}년 ${month}월 ${date}일 ${day}`;
     var timeDisplay = `${hour}:${min}:${sec}`;
     $("#date").html(dateDisplay);
     $("#time").html(timeDisplay);
