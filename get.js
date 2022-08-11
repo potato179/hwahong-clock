@@ -1,12 +1,12 @@
 const mysqlconfig = require('./public/js/mysql_con.js');
 var con = mysqlconfig.con;
 
-function settings_html(req, res, next){
-    res.sendFile('./settings.html', {root: __dirname});
+function script(req, res, next){
+    res.sendFile('./script.js', {root: __dirname});
 }
 
-function settings_js(req, res, next){
-    res.sendFile('./settings.js', {root: __dirname});
+function settings_html(req, res, next){
+    res.sendFile('./settings.html', {root: __dirname});
 }
 
 function get_calander(req, res, next){
@@ -32,7 +32,7 @@ function write_calander(req, res, next){
     });
 }
 
+exports.script = script;
 exports.settings_html = settings_html;
-exports.settings_js = settings_js;
 exports.get_calander = get_calander;
 exports.write_calander = write_calander;

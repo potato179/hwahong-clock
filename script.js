@@ -1,6 +1,8 @@
 console.log("script 로딩 완료");
 
-function onload(){
+window.onload = function(){
+    setInterval(setClock, 1000);
+
     var ajaxdata = {
         type: "GET",
         url: "get_calander",
@@ -19,6 +21,30 @@ function onload(){
         }
     };
     $.ajax(ajaxdata);
+}
+
+function setClock(){
+    var dateInfo = new Date(); 
+    var hour = modifyNumber(dateInfo.getHours());
+    var min = modifyNumber(dateInfo.getMinutes());
+    var sec = modifyNumber(dateInfo.getSeconds());
+    var year = dateInfo.getFullYear();
+    var month = dateInfo.getMonth() + 1;
+    var date = dateInfo.getDate();
+    var dateDisplay = `${year}년 ${month}월 ${date}일`;
+    var timeDisplay = `${hour}:${min}:${sec}`;
+    $("#date").html(dateDisplay);
+    $("#time").html(timeDisplay);
+    dateInfo.getHours();
+}
+
+function modifyNumber(time){
+    if(parseInt(time) < 10){
+        return "0" + time;
+    }
+    else{
+        return time;
+    }
 }
 
 function updateCalander(){
