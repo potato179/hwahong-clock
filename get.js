@@ -10,8 +10,7 @@ function settings_js(req, res, next){
 }
 
 function get_calander(req, res, next){
-    var s = `select * from calander;`;
-    con.query(s, function(err, result){
+    con.query(`select * from calander;`, function(err, result){
         if(err) throw err;
         res.send(result);
     });
