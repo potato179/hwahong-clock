@@ -57,10 +57,10 @@ function setMeal(){
             for(var i = 0; i < x.length; i++){
                 console.log(i, x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue)
                 if(x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue == "중식"){
-                    $("#lunch").html(`중식: [${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}]<br>${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
+                    $("#lunch").html(`열량: ${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}<br>${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
                 }
                 if(x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue == "석식"){
-                    $("#dinner").html(`석식: [${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}]<br>${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
+                    $("#dinner").html(`석식: ${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}<br>${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
                 }
             }
         }
