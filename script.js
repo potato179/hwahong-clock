@@ -67,7 +67,7 @@ function setMeal(){
             }
         }
     };
-    xhttp.open("GET", `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=70460bde9e304a95831a20bef79102bc&ATPT_OFCDC_SC_CODE=F10&SD_SCHUL_CODE=7380061&MLSV_YMD=${year}${month}${date}`, true);
+    xhttp.open("GET", `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=70460bde9e304a95831a20bef79102bc&ATPT_OFCDC_SC_CODE=J10&SD_SCHUL_CODE=7530479&MLSV_YMD=${year}${month}${date}`, true);
     xhttp.send();
 }
 
