@@ -15,8 +15,6 @@ window.onload = function(){
                 $(`#${i}_broadcast`).val(data[i].broadcast);
                 $(`#${i}_events`).html(data[i].events);
                 $(`#${i}_broadcast`).html(data[i].broadcast);
-
-                console.log($(`#${i}_events`).val(), $(`#${i}_broadcast`).val())
             }
         }, 
         error: function (jqXHR, textStatus, errorThrown){ 
@@ -55,9 +53,7 @@ function setMeal(){
         if (this.readyState == 4 && this.status == 200) {
             var xmlDoc = this.responseXML;
             var x = xmlDoc.getElementsByTagName("row");
-            console.log(x)
             for(var i = 0; i < x.length; i++){
-                console.log(i, x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue)
                 if(x[i].getElementsByTagName("MMEAL_SC_NM")[0].childNodes[0].nodeValue == "중식"){
                     $("#lunch").html(`열량: ${x[i].getElementsByTagName("CAL_INFO")[0].childNodes[0].nodeValue}<br>${x[i].getElementsByTagName("DDISH_NM")[0].childNodes[0].nodeValue}`); 
                 }
@@ -87,7 +83,6 @@ function updateCalander(){
         events.push($(`#${i}_events`).val());
         broadcast.push($(`#${i}_broadcast`).val());
     }
-    console.log(events, broadcast);
 
     var sendData = {
         events: events, 
